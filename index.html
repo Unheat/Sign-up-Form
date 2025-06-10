@@ -12,34 +12,42 @@
         <img src="phot.png" alt="Description of the image">
         <div id = "odin"> ODIN</div>
     </div>
-    <form id = "form-wrapper" action="example.com/path" method="post">
+    
+        <form id = "form-wrapper" action="example.com/path" method="post">
+            <p>Similarly, if you're writing a regular expression literal and need to match a slash ("/"), you need to escape that (otherwise, it terminates the pattern). </p>
+              <div class="form-card">
 
-        <div class="form-group">
-        <label for="first-name">FIRST NAME</label>
-        <input type="text" id="first-name" name="first-name">
-        </div>
-        <div class="form-group">
-        <label for="last-name">LAST NAME</label>
-        <input type="text" id="last-name" name="last-name">
-        </div>
-        <div class="form-group">
-        <label for="email">EMAIL</label>
-        <input type="email" id="email" name="email">
-        </div>
-        <div class="form-group">
-        <label for="phone">PHONE</label>
-        <input type="number" id="phone" name="phone">
-        </div>
-        <div class="form-group">
-        <label for="password">PASSWORD</label>
-        <input type="password" id="password" name="password">
-        </div>
-        <div class="form-group">
-        <label for="re-password">CONFIRM PASSWORD</label>
-        <input type="password" id="re-password" name="re-password">
-        </div>
-        <button type="submit">submit</button>
-
-    </form>
+             <div class="fields">
+                <p>let do this</p><div></div>
+                <div class="form-group">
+                <label for="first-name">*FIRST NAME</label>
+                <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                <label for="last-name">*LAST NAME</label>
+                <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                <label for="phone">PHONE</label>
+                <input type="number" id="phone" name="phone" min="5" max ="12" style= "width: 139px">
+                </div>
+                <div class="form-group">
+                <label for="password">*PASSWORD</label>
+                <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                <label for="re-password">CONFIRM PASSWORD</label>
+                <input type="password" id="re-password" name="re-password" required>
+                </div>
+            </div>
+            </div>
+            <button type="submit">create account</button><div></div>
+            <p>already have account? <a href="url">Log in</a></p>
+        </form>
+    </div>
 </body>
 </html>

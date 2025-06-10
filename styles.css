@@ -1,11 +1,15 @@
 html, body {
   margin: 0;
   padding: 0;   /* không bắt buộc nhưng thường xuyên dùng */
+        height: 100%; /* Ensures full viewport height */
+      overflow: hidden; /* Disables scrolling */
+      background-color: rgb(248, 227, 227);
 }
 body{
     display: flex;
     align-items: flex-start;  
     align-items: center;    /* căn giữa theo TRỤC NGANG (X) */
+
 }
 img {
 height: 100%;
@@ -13,7 +17,6 @@ height: 100%;
 #wrapper-image{
     height: 100vh;
     position: relative;
-    
 }
 #odin {
     font-size: 60px;
@@ -26,20 +29,60 @@ height: 100%;
     color: aliceblue;
     background: rgba(0, 0, 0, 0.5);
 }
-#form-wrapper{
+.fields{
     flex: 1 1 auto;
     display: grid;          /* BẮT BUỘC để align-items hoạt động */
     grid-template-columns: 1fr 1fr;
     justify-content: center;/* căn giữa theo TRỤC DỌC   (Y) */
     align-items: center;    /* căn giữa theo TRỤC NGANG (X) */
-    padding: clamp(0px, 13%, 100%) ; /* Flexible padding instead of margin */
+    padding-left: clamp(0px, 13%, 100%) ; /* Flexible padding instead of margin */
+        padding-right: clamp(0px, 13%, 100%) ; /* Flexible padding instead of margin */
+    padding-bottom: 5%;
     box-sizing: border-box;  
     column-gap:0.5rem;          /* Ensures padding stays inside available space */
+    
 }
+#form-wrapper{
+
+
+    flex: 1 1 auto;
+    justify-content: center;/* căn giữa theo TRỤC DỌC   (Y) */
+    align-items: center;    /* căn giữa theo TRỤC NGANG (X) */
+
+}
+
 label {
   display: block;
 }
 
 form, .form-group, input, label {
   min-width: 0;
+}
+button {
+    width: 25%;
+    margin-left: 25px;
+}
+p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 25px;
+}
+a {
+  color: #3498db; /* Blue color */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+  color: #2980b9; /* Darker blue on hover */
+}
+input:invalid{
+    border-color: red;
+}
+input:invalid:required{
+    border-color: orange;
+}
+.form-card{
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
