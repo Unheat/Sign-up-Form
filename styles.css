@@ -4,7 +4,8 @@ html, body {
 }
 body{
     display: flex;
-    
+    align-items: flex-start;  
+    align-items: center;    /* căn giữa theo TRỤC NGANG (X) */
 }
 img {
 height: 100%;
@@ -12,6 +13,7 @@ height: 100%;
 #wrapper-image{
     height: 100vh;
     position: relative;
+    
 }
 #odin {
     font-size: 60px;
@@ -25,17 +27,19 @@ height: 100%;
     background: rgba(0, 0, 0, 0.5);
 }
 #form-wrapper{
-    flex: 1 0 10%;
-  display: flex;          /* BẮT BUỘC để align-items hoạt động */
-  flex-direction: column; /* sắp xếp con dọc */
-  justify-content: center;/* căn giữa theo TRỤC DỌC   (Y) */
-  align-items: center;    /* căn giữa theo TRỤC NGANG (X) */
-
+    flex: 1 1 auto;
+    display: grid;          /* BẮT BUỘC để align-items hoạt động */
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;/* căn giữa theo TRỤC DỌC   (Y) */
+    align-items: center;    /* căn giữa theo TRỤC NGANG (X) */
+    padding: clamp(0px, 13%, 100%) ; /* Flexible padding instead of margin */
+    box-sizing: border-box;  
+    column-gap:0.5rem;          /* Ensures padding stays inside available space */
 }
 label {
   display: block;
 }
-* {
-    border: solid;
-    border-color: red;
+
+form, .form-group, input, label {
+  min-width: 0;
 }
