@@ -1,11 +1,17 @@
+html, body {
+  margin: 0;
+  padding: 0;   /* không bắt buộc nhưng thường xuyên dùng */
+}
+body{
+    display: flex;
+    
+}
 img {
 height: 100%;
 }
 #wrapper-image{
     height: 100vh;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    position: relative;
 }
 #odin {
     font-size: 60px;
@@ -17,4 +23,19 @@ height: 100%;
     z-index: 12;
     color: aliceblue;
     background: rgba(0, 0, 0, 0.5);
+}
+#form-wrapper{
+    flex: 1 0 10%;
+  display: flex;          /* BẮT BUỘC để align-items hoạt động */
+  flex-direction: column; /* sắp xếp con dọc */
+  justify-content: center;/* căn giữa theo TRỤC DỌC   (Y) */
+  align-items: center;    /* căn giữa theo TRỤC NGANG (X) */
+
+}
+label {
+  display: block;
+}
+* {
+    border: solid;
+    border-color: red;
 }
